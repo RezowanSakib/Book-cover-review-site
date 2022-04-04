@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+import useCustomar from "../../Hooks/useCustomar";
+import Reviews from "../Reviews/Reviews";
 
 
 const Home = () => {
-const [customar,setCustomar]=useState([]);
-useEffect(()=>{
-  fetch('customar.json').then(res=>res.json().then(data=>setCustomar(data)))
-},[])
+const [customar,setCustomar]=useCustomar();
+
   return (
     <div>
       <div className="row m-5 align-items-center">
@@ -27,7 +27,7 @@ useEffect(()=>{
         <div className="row">
        
          {
-
+customar.map(customar=><Reviews key={customar.id} customar={customar}></Reviews>)
          }
        
         </div>
