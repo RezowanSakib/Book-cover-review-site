@@ -11,6 +11,10 @@ const Home = () => {
         <div className="col-6">
           <h1>Your new Choice</h1>
           <h1>Your New Book cover</h1>
+          <h4>
+            Best book cover designing site in the world.We design cover by
+            professional designer.You can order cover for your book
+          </h4>
           <button className="btn-lg rounded-pill">Demo</button>
         </div>
         <div className="col-6">
@@ -29,7 +33,7 @@ const Home = () => {
           ))}
         </div>
         <Link to="/reviews">
-          <button className="rounded my-5">See more</button>
+          <button className="rounded my-5 bg-primary">See more</button>
         </Link>
       </div>
     </div>
