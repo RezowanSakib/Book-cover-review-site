@@ -29,7 +29,7 @@ const Home = () => {
           ))}
         </div>
         <Link to="/reviews">
-          <button className="rounded">See more</button>
+          <button className="rounded my-5">See more</button>
         </Link>
       </div>
     </div>
