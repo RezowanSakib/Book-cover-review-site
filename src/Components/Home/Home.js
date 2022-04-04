@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import useCustomar from "../../Hooks/useCustomar";
 import Reviews from "../Reviews/Reviews";
 
-
 const Home = () => {
-const [customar,setCustomar]=useCustomar();
+  const [customar, setCustomar] = useCustomar();
 
   return (
     <div>
@@ -25,13 +24,13 @@ const [customar,setCustomar]=useCustomar();
       <div>
         <h2>Customar Reviews( {customar.length})</h2>
         <div className="row">
-       
-         {
-customar.map(customar=><Reviews key={customar.id} customar={customar}></Reviews>)
-         }
-       
+          {customar.map((customar) => (
+            <Reviews key={customar.id} customar={customar}></Reviews>
+          ))}
         </div>
-        <button className="rounded">See more</button>
+        <Link to="/reviews">
+          <button className="rounded">See more</button>
+        </Link>
       </div>
     </div>
   );
